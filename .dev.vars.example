@@ -1,0 +1,6 @@
+# Copy to .dev.vars and replace every placeholder for local development.
+APP_ENV=local
+DATA_KEY=<base64-encoded-32-byte-key>
+BOOTSTRAP_ADMIN_NAME=<administrator-name>
+BOOTSTRAP_ADMIN_STUDENT_ID=<administrator-student-id>
+BOOTSTRAP_VAULT_PASSWORD=<4-to-32-digit-password>

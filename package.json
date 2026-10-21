@@ -1,0 +1,42 @@
+{
+  "name": "safe-access-portal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.worker.json --pretty false && tsc -p tsconfig.test.json --pretty false && tsc -p tsconfig.node.json --pretty false && tsc -p tsconfig.app.json --pretty false",
+    "test": "vitest run",
+    "package:local": "node scripts/package-artifact.mjs",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrations:list:local": "wrangler d1 migrations list DB --local"
+  },
+  "dependencies": {
+    "@e965/xlsx": "0.20.3",
+    "lucide-react": "1.60.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.64.0",
+    "@cloudflare/vitest-plugin": "1.4.6",
+    "@cloudflare/workers-types": "5.20261021.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "@vitest/coverage-v8": "5.0.5",
+    "playwright-core": "1.64.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.5",
+    "wrangler": "4.151.3"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@9.15.4"
+}
