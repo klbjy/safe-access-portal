@@ -1,10 +1,8 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react(), cloudflare({ viteEnvironment: { name: "worker" } })],
-  environments: {
-    worker: { build: { sourcemap: true } },
-  },
+  base: process.env.VITE_BASE_PATH ?? "/",
+  plugins: [react()],
+  build: { sourcemap: false },
 });
